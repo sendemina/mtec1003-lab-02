@@ -1,0 +1,238 @@
+MTEC1003 — LAB 02 (revised revised 2/7/21 —lg)
+
+LAB 2 / PART 2: Working With Files
+
+==========
+Follow the instructions line-by-line.
+
+* Type in the commands as is, but ignore the beginning prompt.
+* Enter, tab, up and down are represented by <ENTER><TAB>,<UP> and <DOWN>.
+* "No output" or "nothing happens" are valid answers to any of the questions.
+==========
+
+1a. Go to your home directory.
+
+Write the command that you used to do this below:
+----------
+
+cd ~
+
+==========
+1b. Prove that you're in your home directory.
+
+Write the command that you used to do this - as well as its output - below :
+----------
+
+pwd
+/Users/Kseniia
+
+==========
+1c. Create a new directory inside your home directory named after this class. Call it "mtec1003-lab-02".
+
+Write the command that you used to do this:
+----------
+
+mkdir mtec1003-lab-02
+
+==========
+
+==========
+1d. Change into your mtec1003-lab-02 directory.
+
+What command did you use?
+----------
+
+cd mtec1003-lab-02/
+
+==========
+2. Create a directory called my_files.
+Then, change into your new directory.
+
+What two commands did you use?
+----------
+
+mkdir my_files
+cd my_files
+
+==========
+3. Create a new file using touch:
+
+$ touch foo.txt
+$ ls
+
+Copy and paste the output below.
+----------
+
+foo.txt
+
+==========
+4. Create another new file called "bar.txt".
+
+What command did you use?
+----------
+
+touch bar.txt
+
+==========
+5. Create a copy of bar.txt called baz.txt, and then list the files again.
+
+Write the commands that you used.
+Also, copy and paste the output of your file listing below.
+----------
+
+cp bar.txt baz.txt
+ls
+bar.txt	baz.txt	foo.txt
+
+==========
+6. Delete the file called bar.txt and then list the files again.
+
+Write the command that you used to remove the file.
+Copy and paste the output of your file listing below.
+----------
+
+rm bar.txt
+baz.txt	foo.txt
+
+==========
+7. Move the file called foo.txt to qux.txt and then list the files again.
+
+
+Write the command that you used to move the file.
+Copy and paste the output of your file listing below.
+----------
+
+mv foo.txt qux.txt
+baz.txt	qux.txt
+
+==========
+8. Go up one directory so that you're back in ~/mtec1003-lab-02. What command did you use?
+----------
+
+cd ..
+
+==========
+9. Try removing the directory called my_files using rmdir.
+
+Write out the command that you used and what happened.
+----------
+
+rmdir my_files
+rmdir: my_files: Directory not empty
+
+==========
+10. Try removing the directory called my_files using rm.
+
+Write out the command that you used and what happened.
+----------
+
+rm my_files
+rm: my_files: is a directory
+
+==========
+11. First: MAKE SURE YOU'RE IN THE mtec1003-lab-02 directory!
+***If you accidentally delete your other files, you'll have to start over!!***
+
+Force the removal of the directory and its files using the -rf flag
+
+Use this command:
+
+$ rm -rf my_files
+(options r = recursive; f = skip confirmation)
+----------
+
+
+
+
+==========
+12. There's a txt file version of a book located in the mtec1003-lab-02 folder.  It is in the following directory if you're in the lab folder:
+
+books/other/pg1232.txt
+
+Use the command called cat on the file to show its contents.
+
+Describe what happened below.
+----------
+
+cat books/other/pg1232.txt
+printed the entire text file starting with the line "The Project Gutenberg EBook of The Prince, by Nicolo Machiavelli"
+
+==========
+13. That was a lot of text.  Let's find ways to limit it.  Using the same file...
+
+books/other/pg1232.txt
+
+Use the command, head, on the file to show the contents of the beginning of the file.
+
+Write the command that you used below.  Write the last line of the output below (it should be the title).
+----------
+
+head books/other/pg1232.txt
+Title: The Prince
+
+==========
+14. Using the same file again!
+
+books/other/pg1232.txt
+
+Use tail on the file to show the contents of the end of the file.
+
+Write the command that you used below.  Write the last line of the output below.
+----------
+
+tail books/other/pg1232.txt
+subscribe to our email newsletter to hear about new eBooks.
+
+==========
+15. Using the same file...
+
+books/other/pg1232.txt
+
+Use less and more on the file to show the contents of the file.  Try pressing spacebar and/or q afterwards.
+
+Write the command that you used below.  Describe what spacebar and q does after using either less or more.
+----------
+
+less books/other/pg1232.txt
+
+spacebar - goes to the next page
+q - finishes the command
+
+==========
+16. Describe what situations you would use the following commands for viewing files: less, more, cat, tail, head
+
+(Some characteristics that may help your description might be the length of the file, whether or not you'd like to read the whole thing... or just the beginning or end, etc.)
+----------
+
+cat - read the entire file
+head - only read the beginning
+tail - only read the end
+less/more - read through the pages of a long file
+
+==========
+17.  How many words are in pg1232.txt?  What command did you use to determine the word count?
+----------
+
+wc -w books/other/pg1232.txt
+52639
+
+==========
+18.  How many lines are in pg1232.txt?  What command did you use to determine the line count?
+----------
+
+wc -l books/other/pg1232.txt
+5063
+
+==========
+19.  Make sure you're in the books/other folder.  Copy all of the txt files from that folder to your home directory using wildcard matching.
+
+Write the command that you used below.
+----------
+
+cp *.txt /Users/Kseniia
+
+==========
+Next: Save this file. Then, using your mouse or a Terminal command that you learned this week, MOVE this file into your "mtec1003-lab-02" folder.
+
+And that's it! Now, go on to LAB 2 / PART 3...
+----------
